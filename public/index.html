@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mapa Acessível por Voz</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    #btn-voz {
+      width: 300px;
+      height: 150px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      background-color: #0078d7;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 20px #0078d7;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    #btn-voz:focus,
+    #btn-voz:hover {
+      background-color: #005ea1;
+      box-shadow: 0 0 30px #005ea1;
+      outline: none;
+    }
+
+    #mensagem {
+      margin-top: 40px;
+      font-size: 1.8rem;
+      min-height: 60px;
+      user-select: none;
+    }
+
+    @media (max-width: 400px) {
+      #btn-voz {
+        width: 90vw;
+        height: 120px;
+        font-size: 1.8rem;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+      #mensagem {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Mapa Acessível por Voz</h1>
+  <button id="btn-voz" aria-label="Ativar reconhecimento de voz">
+    Ativar Voz
+  </button>
+  <p id="mensagem" aria-live="polite" aria-atomic="true">
+    Clique para começar
+  </p>
+
+  <script src="script.js"></script>
+</body>
+</html>
